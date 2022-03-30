@@ -13,6 +13,7 @@ class WalterWhiteHandler:
     """
 
     def __init__(self):
+        """ initialization function for the class """
         self.f = None
 
     def __enter__(self):
