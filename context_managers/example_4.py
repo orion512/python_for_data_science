@@ -12,7 +12,10 @@ import contextlib
 
 @contextlib.contextmanager
 def db_handler():
-    """  """
+    """
+        This function can be transfored into a simple 
+        context manager by using a contextlib decorator.
+    """
     try:
         print('This is like the enter method')
         yield
@@ -39,10 +42,12 @@ class dbhandler_decorator(contextlib.ContextDecorator):
 
 @dbhandler_decorator()
 def simple_fun():
+    """ A simple function to test our own conext manager decorator """
     print('I am in the simple function')
 
 
 # TODO: Suppress warnings
+
 
 
 if __name__ == "__main__":
@@ -53,3 +58,10 @@ if __name__ == "__main__":
 
     with dbhandler_decorator() as obj:
         print('Another way of using the decorator context manager ' + str(obj))
+
+    # Context manager can also be used to suppress warnings where we know it is safe to ignore them
+    # It is somewhat similar to running try/except block and passing an exception
+    # but using supress makes it more explicit that those warnings are controlled within the logic
+    # below is bad example of using suppress but it should get the point across
+    with contextlib.suppress(ZeroDivisionError):
+        b = 9 / 0

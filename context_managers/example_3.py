@@ -60,7 +60,7 @@ def select_from_db():
 
 
 def select_from_db_2():
-    """ THis function uses the context manager built in psycopg2 library """
+    """ This function uses the context manager built in psycopg2 library """
     with psycopg2.connect(
         host='localhost',
         user='postgres',
