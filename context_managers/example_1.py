@@ -8,7 +8,7 @@ Author: Dominik Zulovec Sajovic, March 2022
 
 
 def read_file():
-    """ This functions reads a file without using context managers """
+    """ This function reads a file without using context managers """
 
     # open the file
     f = open("datasets/nba_scoring_champions.csv", "r")
