@@ -30,10 +30,15 @@ deactivate
 Context managers a a python spcific features so we can consider them as idiomatic.
 
 ### Agenda
-- What are context managers?
-- How context managers work?
-- Context manager with a DB connection
-- Implementation of context managers
+- What are context managers? (example 1)
+- How context managers work? (example 2)
+- Context manager with a DB connection (example 3)
+- Implementation of context managers (example 4)
 
 ## 2. List Comprehensions
-
+- Loops vs comprehensions (example 1)
+- Simulation of loops and comprehensions (example 2)
+    - comprehensions seem to perform ~15% better
+- Comprehensions vs vectorised implementation (example 3)
+    - vectorised implementation seems to perform ~95% better
+- Filter vs comprehensions (example 4)
